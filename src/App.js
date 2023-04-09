@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="App">
-      <button class="btn w-64 rounded-full">Button</button>
-    </div>
-  );
+  return <div className="App">App</div>;
 }
 
 export default App;
