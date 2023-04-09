@@ -18,7 +18,12 @@ function Navbar({ title }) {
             >
               Home
             </Link>
-            <Link to='/about' className='btn btn-ghost btn-sm rounded-btn'>About</Link>
+            <Link
+              to="/about"
+              className="btn btn-ghost btn-sm rounded-btn"
+            >
+              About
+            </Link>
           </div>
         </div>
       </div>
@@ -27,4 +32,5 @@ function Navbar({ title }) {
 }
 
 Navbar.defaultProps = { title: 'Github Finder' };
+Navbar.propTypes = { title: PropTypes.string };
 export default Navbar;
