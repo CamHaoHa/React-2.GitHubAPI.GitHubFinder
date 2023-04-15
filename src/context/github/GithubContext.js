@@ -16,6 +16,7 @@ export const GithubProvider = ({ children }) => {
     });
   };
 
+  //seasrch users when submitting form
   const searchUsers = async (text) => {
     setLoading();
 
@@ -37,9 +38,22 @@ export const GithubProvider = ({ children }) => {
     });
   };
 
+  //clear users state when user click the clear button
+  const clearUsersState = () => {
+    setLoading();
+
+    dispatch({
+      type: 'CLEAR_USERS',
+    });
+  };
   return (
     <GithubContext.Provider
-      value={{ users: state.users, isLoading: state.isLoading, searchUsers }}
+      value={{
+        users: state.users,
+        isLoading: state.isLoading,
+        searchUsers,
+        clearUsersState,
+      }}
     >
       {children}
     </GithubContext.Provider>

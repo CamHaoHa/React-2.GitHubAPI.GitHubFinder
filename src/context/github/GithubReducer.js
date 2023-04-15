@@ -7,6 +7,13 @@ const githubReducer = (state, action) => {
         isLoading: false,
       };
 
+    case (action.type = 'CLEAR_USERS'):
+      return {
+        ...state,
+        users: [],
+        isLoading: false,
+      };
+
     case (action.type = 'SET_LOADING'):
       return { ...state, isLoading: true };
     default:
