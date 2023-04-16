@@ -3,10 +3,12 @@ import GithubContext from '../../context/github/GithubContext';
 
 function UserSearch() {
   const { users, searchUsers, clearUsersState } = useContext(GithubContext);
-  const [text, setText] = useState([]);
+  const [text, setText] = useState('');
+
   const handleTextChange = (e) => {
     setText(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text === '') {
@@ -16,6 +18,7 @@ function UserSearch() {
       setText('');
     }
   };
+
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
       <div>
