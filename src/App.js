@@ -4,7 +4,9 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './components/pages/Home';
 import AboutPage from './components/pages/AboutPage';
+import User from './components/pages/User';
 import NotFound from './components/pages/NotFound';
+
 import Alert from './components/layout/Alert';
 import { GithubProvider } from './context/github/GithubContext';
 import { AlertProvider } from './context/alert/AlertContext';
@@ -25,6 +27,10 @@ function App() {
                 <Route
                   path="/about"
                   element={<AboutPage />}
+                />
+                <Route
+                  path="/user/:login"
+                  element={<User />}
                 />
                 <Route
                   path="/notfound"
