@@ -5,7 +5,7 @@ function Spinner() {
       <img
         src={spinnerGif}
         alt="Loading..."
-        className="text-center mx-auto"
+        className="rounded-full text-center mx-auto"
         width={580}
       />
     </div>
