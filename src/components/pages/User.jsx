@@ -44,6 +44,9 @@ function User() {
   if (isLoading) {
     return <Spinner />;
   }
+
+  //validate url for user website
+  const validUrl = blog?.startsWith('http') ? blog : 'https://' + blog;
   return (
     <>
       <div className="w-full mx-auto lg:w-10/12 user-info">
@@ -111,7 +114,7 @@ function User() {
                   <div className="stat-title text-md">Website</div>
                   <div className="text-lg stat-value text-white">
                     <a
-                      href={`https://${blog}`}
+                      href={validUrl}
                       target="_black"
                       rel="nonferrer"
                     >
